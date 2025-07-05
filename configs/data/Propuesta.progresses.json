@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "68687d6e8be28178a1b5a3ec"
+  },
+  "user": {
+    "$oid": "686861082474f8ff7790d780"
+  },
+  "material": {
+    "$oid": "686872653679f727c0e6b19e"
+  },
+  "completed": true,
+  "score": 100,
+  "createdAt": {
+    "$date": "2025-07-05T01:18:38.352Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-05T01:24:26.734Z"
+  }
+}]

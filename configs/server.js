@@ -7,7 +7,13 @@ import morgan from 'morgan';
 import { dbConnection } from './mongo.js';
 import limiter from '../src/middlewares/validar-cant-peticion.js';
 import authRoutes from '../src/auth/auth.routes.js';
-import materialRoutes from '../src/materials/material.routes.js';
+import materialRoutes from '../src/material/material.routes.js';
+import categoryRoutes from '../src/category/category.routes.js';
+import courseRoutes from '../src/course/course.routes.js';
+import quizRoutes from '../src/quiz/quiz.routes.js';
+import progressRoutes from '../src/progress/progress.routes.js';
+import forumRoutes from '../src/forum/forum.routes.js';
+import postRoutes from '../src/post/post.routes.js';
 
 const middlewares = (app) => {
     app.use(express.urlencoded({ extended: false }));
@@ -20,7 +26,13 @@ const middlewares = (app) => {
 
 const routes =(app) => {
     app.use('/Propuesta/v1/auth', authRoutes);
-    app.use('/Propuesta/v1/materiales', materialRoutes);
+    app.use('/Propuesta/v1/material', materialRoutes);
+    app.use('/Propuesta/v1/category', categoryRoutes);
+    app.use('/Propuesta/v1/course', courseRoutes);
+    app.use('/Propuesta/v1/quiz', quizRoutes);
+    app.use('/Propuesta/v1/progress', progressRoutes);
+    app.use('/Propuesta/v1/forum', forumRoutes);
+    app.use('/Propuesta/v1/post', postRoutes);
 }
  
  

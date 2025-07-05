@@ -1,0 +1,1115 @@
+{
+	"info": {
+		"_postman_id": "f0f85cab-c78b-4ac9-a4ed-89fae0162969",
+		"name": "Propuesta",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42630298"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Elmer\",\r\n  \"username\": \"Elmer\",\r\n  \"email\": \"elmer@gmail.com\",\r\n  \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Elmer\",\r\n  \"username\": \"Elmer\",\r\n  \"email\": \"elmer@gmail.com\",\r\n  \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear categoria",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODY4NjEwODI0NzRmOGZmNzc5MGQ3ODAiLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MTY3MzUwNywiZXhwIjoxNzUxNjgwNzA3fQ.Wlp8cLh763emCuKrDnS5CqNYxjBTTrO3kNOJZFGZiyU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Mathematics\",\r\n  \"description\": \"Category for all mathematics-related courses and materials\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar categoria",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODY4NjEwODI0NzRmOGZmNzc5MGQ3ODAiLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MTY3MzUwNywiZXhwIjoxNzUxNjgwNzA3fQ.Wlp8cLh763emCuKrDnS5CqNYxjBTTrO3kNOJZFGZiyU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar categoria por id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODY4NjEwODI0NzRmOGZmNzc5MGQ3ODAiLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MTY3MzUwNywiZXhwIjoxNzUxNjgwNzA3fQ.Wlp8cLh763emCuKrDnS5CqNYxjBTTrO3kNOJZFGZiyU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/category/68686ac489e21d042b292999",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"category",
+						"68686ac489e21d042b292999"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar categoria",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODY4NjEwODI0NzRmOGZmNzc5MGQ3ODAiLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MTY3MzUwNywiZXhwIjoxNzUxNjgwNzA3fQ.Wlp8cLh763emCuKrDnS5CqNYxjBTTrO3kNOJZFGZiyU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Advanced Mathematics\",\r\n  \"description\": \"Updated description for the mathematics category\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/category/68686ac489e21d042b292999",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"category",
+						"68686ac489e21d042b292999"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar categoria",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODY4NjEwODI0NzRmOGZmNzc5MGQ3ODAiLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MTY3MzUwNywiZXhwIjoxNzUxNjgwNzA3fQ.Wlp8cLh763emCuKrDnS5CqNYxjBTTrO3kNOJZFGZiyU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/category/68686ac489e21d042b292999",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"category",
+						"68686ac489e21d042b292999"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear curso",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODY4NjEwODI0NzRmOGZmNzc5MGQ3ODAiLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MTY3MzUwNywiZXhwIjoxNzUxNjgwNzA3fQ.Wlp8cLh763emCuKrDnS5CqNYxjBTTrO3kNOJZFGZiyU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Basic Algebra\",\r\n  \"description\": \"Introduction to algebra concepts and problem solving.\",\r\n  \"category\": \"68686ac489e21d042b292999\",\r\n  \"level\": \"Beginner\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/course",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"course"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar cursos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/course",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"course"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar cursos por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/course/68686dfe25502f484d42b936",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"course",
+						"68686dfe25502f484d42b936"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar curso",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODY4NjEwODI0NzRmOGZmNzc5MGQ3ODAiLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MTY3MzUwNywiZXhwIjoxNzUxNjgwNzA3fQ.Wlp8cLh763emCuKrDnS5CqNYxjBTTrO3kNOJZFGZiyU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Intermediate Algebra\",\r\n  \"description\": \"Extended concepts in algebra with more exercises.\",\r\n  \"category\": \"68686ac489e21d042b292999\",\r\n  \"level\": \"Intermediate\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/course/68686dfe25502f484d42b936",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"course",
+						"68686dfe25502f484d42b936"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar curso",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODY4NjEwODI0NzRmOGZmNzc5MGQ3ODAiLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MTY3MzUwNywiZXhwIjoxNzUxNjgwNzA3fQ.Wlp8cLh763emCuKrDnS5CqNYxjBTTrO3kNOJZFGZiyU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/course/68686dfe25502f484d42b936",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"course",
+						"68686dfe25502f484d42b936"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear material",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODY4NjEwODI0NzRmOGZmNzc5MGQ3ODAiLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MTY3MzUwNywiZXhwIjoxNzUxNjgwNzA3fQ.Wlp8cLh763emCuKrDnS5CqNYxjBTTrO3kNOJZFGZiyU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Introduction to Algebra\",\r\n  \"description\": \"Video and notes covering basic algebraic principles.\",\r\n  \"content\": \"https://example.com/algebra-material\",\r\n  \"category\": \"68686ac489e21d042b292999\",\r\n  \"course\": \"68686dfe25502f484d42b936\",\r\n  \"level\": \"Beginner\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/material",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"material"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar material",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/material",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"material"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar material por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/material/686872653679f727c0e6b19e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"material",
+						"686872653679f727c0e6b19e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar material",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODY4NjEwODI0NzRmOGZmNzc5MGQ3ODAiLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MTY3MzUwNywiZXhwIjoxNzUxNjgwNzA3fQ.Wlp8cLh763emCuKrDnS5CqNYxjBTTrO3kNOJZFGZiyU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Algebra Basics - Updated\",\r\n  \"description\": \"Updated material with more examples and exercises.\",\r\n  \"content\": \"https://www.youtube.com/watch?v=EKeMeKv8c-I\",\r\n  \"category\": \"68686ac489e21d042b292999\",\r\n  \"course\": \"68686dfe25502f484d42b936\",\r\n  \"level\": \"Intermediate\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/material/686872653679f727c0e6b19e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"material",
+						"686872653679f727c0e6b19e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar material",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODY4NjEwODI0NzRmOGZmNzc5MGQ3ODAiLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MTY3MzUwNywiZXhwIjoxNzUxNjgwNzA3fQ.Wlp8cLh763emCuKrDnS5CqNYxjBTTrO3kNOJZFGZiyU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/material/64f789abc123def456789012",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"material",
+						"64f789abc123def456789012"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear quiz",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODY4NjEwODI0NzRmOGZmNzc5MGQ3ODAiLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MTY3MzUwNywiZXhwIjoxNzUxNjgwNzA3fQ.Wlp8cLh763emCuKrDnS5CqNYxjBTTrO3kNOJZFGZiyU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Algebra Basics Quiz\",\r\n  \"description\": \"Test your understanding of basic algebra.\",\r\n  \"category\": \"68686ac489e21d042b292999\",\r\n  \"course\": \"68686dfe25502f484d42b936\",\r\n  \"level\": \"Beginner\",\r\n  \"questions\": [\r\n    {\r\n      \"questionText\": \"What is the value of x in the equation 2x + 3 = 7?\",\r\n      \"options\": [\"1\", \"2\", \"3\", \"4\"],\r\n      \"correctAnswer\": \"2\"\r\n    },\r\n    {\r\n      \"questionText\": \"Simplify: 3(x + 2)\",\r\n      \"options\": [\"3x + 2\", \"3x + 6\", \"x + 6\", \"3x + 3\"],\r\n      \"correctAnswer\": \"3x + 6\"\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/quiz",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"quiz"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar quiz",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/quiz",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"quiz"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar quiz por id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/quiz/6868764c4464cf1f5857ec66",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"quiz",
+						"6868764c4464cf1f5857ec66"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar quiz",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODY4NjEwODI0NzRmOGZmNzc5MGQ3ODAiLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MTY3MzUwNywiZXhwIjoxNzUxNjgwNzA3fQ.Wlp8cLh763emCuKrDnS5CqNYxjBTTrO3kNOJZFGZiyU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Algebra Basics Quiz - Updated\",\r\n  \"description\": \"Updated quiz with additional questions.\",\r\n  \"category\": \"68686ac489e21d042b292999\",\r\n  \"course\": \"68686dfe25502f484d42b936\",\r\n  \"level\": \"Intermediate\",\r\n  \"questions\": [\r\n    {\r\n      \"questionText\": \"What is the value of x in the equation x/2 = 5?\",\r\n      \"options\": [\"5\", \"10\", \"2\", \"1\"],\r\n      \"correctAnswer\": \"10\"\r\n    },\r\n    {\r\n      \"questionText\": \"Expand: (x + 1)(x - 1)\",\r\n      \"options\": [\"x^2 + 1\", \"x^2 - 1\", \"x^2 + 2x + 1\", \"x^2 - 2x + 1\"],\r\n      \"correctAnswer\": \"x^2 - 1\"\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/quiz/6868764c4464cf1f5857ec66",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"quiz",
+						"6868764c4464cf1f5857ec66"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar quiz",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODY4NjEwODI0NzRmOGZmNzc5MGQ3ODAiLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MTY3MzUwNywiZXhwIjoxNzUxNjgwNzA3fQ.Wlp8cLh763emCuKrDnS5CqNYxjBTTrO3kNOJZFGZiyU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/quiz/6868764c4464cf1f5857ec66",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"quiz",
+						"6868764c4464cf1f5857ec66"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear progress",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODY4NjEwODI0NzRmOGZmNzc5MGQ3ODAiLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MTY3MzUwNywiZXhwIjoxNzUxNjgwNzA3fQ.Wlp8cLh763emCuKrDnS5CqNYxjBTTrO3kNOJZFGZiyU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"user\": \"686861082474f8ff7790d780\",\r\n  \"material\": \"686872653679f727c0e6b19e\",\r\n  \"completed\": true,\r\n  \"score\": 95\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/progress",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"progress"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar progress",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODY4NjEwODI0NzRmOGZmNzc5MGQ3ODAiLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MTY3MzUwNywiZXhwIjoxNzUxNjgwNzA3fQ.Wlp8cLh763emCuKrDnS5CqNYxjBTTrO3kNOJZFGZiyU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/progress",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"progress"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar progress por id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODY4NjEwODI0NzRmOGZmNzc5MGQ3ODAiLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MTY3MzUwNywiZXhwIjoxNzUxNjgwNzA3fQ.Wlp8cLh763emCuKrDnS5CqNYxjBTTrO3kNOJZFGZiyU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/progress/68687d6e8be28178a1b5a3ec",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"progress",
+						"68687d6e8be28178a1b5a3ec"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar progress",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODY4NjEwODI0NzRmOGZmNzc5MGQ3ODAiLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MTY3MzUwNywiZXhwIjoxNzUxNjgwNzA3fQ.Wlp8cLh763emCuKrDnS5CqNYxjBTTrO3kNOJZFGZiyU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"completed\": true,\r\n  \"score\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/progress/68687d6e8be28178a1b5a3ec",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"progress",
+						"68687d6e8be28178a1b5a3ec"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar progress",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODY4NjEwODI0NzRmOGZmNzc5MGQ3ODAiLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MTY3MzUwNywiZXhwIjoxNzUxNjgwNzA3fQ.Wlp8cLh763emCuKrDnS5CqNYxjBTTrO3kNOJZFGZiyU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/progress/68687d6e8be28178a1b5a3ec",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"progress",
+						"68687d6e8be28178a1b5a3ec"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear foro",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODY4NjEwODI0NzRmOGZmNzc5MGQ3ODAiLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MTY3MzUwNywiZXhwIjoxNzUxNjgwNzA3fQ.Wlp8cLh763emCuKrDnS5CqNYxjBTTrO3kNOJZFGZiyU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Dudas de Matemáticas\",\r\n  \"description\": \"Comparte aquí tus dudas sobre matemáticas\",\r\n  \"category\": \"64f123abc456def789012345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/forum",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"forum"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar foros",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODY4NjEwODI0NzRmOGZmNzc5MGQ3ODAiLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MTY3MzUwNywiZXhwIjoxNzUxNjgwNzA3fQ.Wlp8cLh763emCuKrDnS5CqNYxjBTTrO3kNOJZFGZiyU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/forum",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"forum"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar foro por id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODY4NjEwODI0NzRmOGZmNzc5MGQ3ODAiLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MTY3MzUwNywiZXhwIjoxNzUxNjgwNzA3fQ.Wlp8cLh763emCuKrDnS5CqNYxjBTTrO3kNOJZFGZiyU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/forum/6868845706a23b22ee920863",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"forum",
+						"6868845706a23b22ee920863"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar foro",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODY4NjEwODI0NzRmOGZmNzc5MGQ3ODAiLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MTY3MzUwNywiZXhwIjoxNzUxNjgwNzA3fQ.Wlp8cLh763emCuKrDnS5CqNYxjBTTrO3kNOJZFGZiyU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Dudas de Matemáticas\",\r\n  \"description\": \"Comparte aquí tus dudas sobre matemáticas\",\r\n  \"category\": \"64f123abc456def789012345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/forum/6868845706a23b22ee920863",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"forum",
+						"6868845706a23b22ee920863"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODY4NjEwODI0NzRmOGZmNzc5MGQ3ODAiLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MTY4MDc1MSwiZXhwIjoxNzUxNjg3OTUxfQ.hUTyLDzg4Z560FGjhk4Jj1qsOx9Qz3CLnlUaPEoUG-I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"forum\": \"665c8d2fc7e1a14c12345678\",\r\n  \"content\": \"¿Podrían explicarme cómo resolver la ecuación cuadrática paso a paso?\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Responder al post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODY4NjEwODI0NzRmOGZmNzc5MGQ3ODAiLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MTY4MDc1MSwiZXhwIjoxNzUxNjg3OTUxfQ.hUTyLDzg4Z560FGjhk4Jj1qsOx9Qz3CLnlUaPEoUG-I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"forum\": \"6868845706a23b22ee920863\",\r\n  \"content\": \"Muy bien explicado, gracias!\",\r\n  \"parentPost\": \"686886fa0d96566ea4e40e7c\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar respuestas del foro",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODY4NjEwODI0NzRmOGZmNzc5MGQ3ODAiLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MTY4MDc1MSwiZXhwIjoxNzUxNjg3OTUxfQ.hUTyLDzg4Z560FGjhk4Jj1qsOx9Qz3CLnlUaPEoUG-I",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/post/forum/6868845706a23b22ee920863",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"post",
+						"forum",
+						"6868845706a23b22ee920863"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar respuesta",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODY4NjEwODI0NzRmOGZmNzc5MGQ3ODAiLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MTY4MDc1MSwiZXhwIjoxNzUxNjg3OTUxfQ.hUTyLDzg4Z560FGjhk4Jj1qsOx9Qz3CLnlUaPEoUG-I",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:33/Propuesta/v1/post/6868845706a23b22ee920863",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33",
+					"path": [
+						"Propuesta",
+						"v1",
+						"post",
+						"6868845706a23b22ee920863"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "686872653679f727c0e6b19e"
+  },
+  "title": "Algebra Basics - Updated",
+  "description": "Updated material with more examples and exercises.",
+  "content": "https://www.youtube.com/watch?v=EKeMeKv8c-I",
+  "category": {
+    "$oid": "68686ac489e21d042b292999"
+  },
+  "course": {
+    "$oid": "68686dfe25502f484d42b936"
+  },
+  "level": "Intermediate",
+  "createdBy": {
+    "$oid": "686861082474f8ff7790d780"
+  },
+  "createdAt": {
+    "$date": "2025-07-05T00:31:33.363Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-05T00:36:12.136Z"
+  }
+}]

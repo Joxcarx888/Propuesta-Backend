@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "686886fa0d96566ea4e40e7c"
+  },
+  "forum": {
+    "$oid": "665c8d2fc7e1a14c12345678"
+  },
+  "user": {
+    "$oid": "686861082474f8ff7790d780"
+  },
+  "content": "¿Podrían explicarme cómo resolver la ecuación cuadrática paso a paso?",
+  "parentPost": null,
+  "createdAt": {
+    "$date": "2025-07-05T01:59:22.137Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-05T01:59:22.137Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "686887770d96566ea4e40e7f"
+  },
+  "forum": {
+    "$oid": "6868845706a23b22ee920863"
+  },
+  "user": {
+    "$oid": "686861082474f8ff7790d780"
+  },
+  "content": "Muy bien explicado, gracias!",
+  "parentPost": {
+    "$oid": "686886fa0d96566ea4e40e7c"
+  },
+  "createdAt": {
+    "$date": "2025-07-05T02:01:27.256Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-05T02:01:27.256Z"
+  }
+}]

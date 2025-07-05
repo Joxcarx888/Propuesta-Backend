@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "6868764c4464cf1f5857ec66"
+  },
+  "title": "Algebra Basics Quiz - Updated",
+  "description": "Updated quiz with additional questions.",
+  "category": {
+    "$oid": "68686ac489e21d042b292999"
+  },
+  "course": {
+    "$oid": "68686dfe25502f484d42b936"
+  },
+  "level": "Intermediate",
+  "questions": [
+    {
+      "questionText": "What is the value of x in the equation x/2 = 5?",
+      "options": [
+        "5",
+        "10",
+        "2",
+        "1"
+      ],
+      "correctAnswer": "10"
+    },
+    {
+      "questionText": "Expand: (x + 1)(x - 1)",
+      "options": [
+        "x^2 + 1",
+        "x^2 - 1",
+        "x^2 + 2x + 1",
+        "x^2 - 2x + 1"
+      ],
+      "correctAnswer": "x^2 - 1"
+    }
+  ],
+  "createdBy": {
+    "$oid": "686861082474f8ff7790d780"
+  },
+  "createdAt": {
+    "$date": "2025-07-05T00:48:12.173Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-05T01:03:37.543Z"
+  }
+}]

@@ -1,0 +1,17 @@
+[{
+  "_id": {
+    "$oid": "686861082474f8ff7790d780"
+  },
+  "name": "Elmer",
+  "username": "Elmer",
+  "email": "elmer@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$JfEnFvaIkMckA7mW7/zadA$VR/BNWC5JaPHLz8P3yseilSpEa8gf9loImz1Kb86gak",
+  "role": "ADMIN",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-07-04T23:17:28.283Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-04T23:17:28.283Z"
+  }
+}]

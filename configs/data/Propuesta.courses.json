@@ -1,0 +1,20 @@
+[{
+  "_id": {
+    "$oid": "68686dfe25502f484d42b936"
+  },
+  "title": "Intermediate Algebra",
+  "description": "Extended concepts in algebra with more exercises.",
+  "category": {
+    "$oid": "68686ac489e21d042b292999"
+  },
+  "level": "Intermediate",
+  "createdBy": {
+    "$oid": "686861082474f8ff7790d780"
+  },
+  "createdAt": {
+    "$date": "2025-07-05T00:12:46.067Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-05T00:13:07.086Z"
+  }
+}]

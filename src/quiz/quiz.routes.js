@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { createQuiz, getAllQuizzes, getQuizById, updateQuiz, deleteQuiz } from '../quiz/quiz.controller.js';
+import { createQuiz, getAllQuizzes, getQuizById, updateQuiz, deleteQuiz, createMRUQuiz } from '../quiz/quiz.controller.js';
 import { validarJWT } from '../middlewares/validar-jwt.js';
 import { tieneRole } from '../middlewares/validar-roles.js';
 
@@ -34,6 +34,13 @@ router.delete(
     validarJWT,
     tieneRole('ADMIN', 'TUTOR'),
     deleteQuiz
+);
+
+router.post(
+    '/generate/mru',
+    validarJWT,
+    tieneRole('ADMIN', 'TUTOR'),
+    createMRUQuiz
 );
 
 export default router;

@@ -1,4 +1,5 @@
 import Quiz from '../quiz/quiz.model.js';
+import { generateMRUQuiz } from '../utils/quizgenerator.js';
 
 export const createQuiz = async (req, res) => {
   const { title, description, category, course, level, questions } = req.body;
@@ -132,6 +133,28 @@ export const deleteQuiz = async (req, res) => {
     return res.status(500).json({
       success: false,
       message: 'Error deleting quiz',
+      error: error.message,
+    });
+  }
+};
+
+export const createMRUQuiz = async (req, res) => {
+  try {
+    const { category, course } = req.body;
+
+    const quizData = generateMRUQuiz(req.usuario._id, category, course);
+    const quiz = new Quiz(quizData);
+    await quiz.save();
+
+    return res.status(201).json({
+      success: true,
+      message: 'Quiz de MRU creado exitosamente',
+      quiz,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      message: 'Error al crear el quiz de MRU',
       error: error.message,
     });
   }

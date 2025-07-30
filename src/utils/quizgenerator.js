@@ -70,3 +70,69 @@ export function generateMRUQuiz(userId, categoryId, courseId) {
     createdBy: userId,
   };
 }
+
+function generateAreaQuestion() {
+  const figureType = Math.floor(Math.random() * 4);
+  let questionText, correctAnswer;
+
+  switch (figureType) {
+    case 0: { 
+      const lado = Math.floor(Math.random() * 16) + 5; // 5 - 20
+      questionText = `¿Cuál es el área de un cuadrado con lado de ${lado} cm?`;
+      correctAnswer = (lado * lado).toFixed(2) + ' cm²';
+      break;
+    }
+    case 1: { 
+      const base = Math.floor(Math.random() * 16) + 5;
+      const altura = Math.floor(Math.random() * 16) + 5;
+      questionText = `¿Cuál es el área de un rectángulo de base ${base} cm y altura ${altura} cm?`;
+      correctAnswer = (base * altura).toFixed(2) + ' cm²';
+      break;
+    }
+    case 2: { 
+      const base = Math.floor(Math.random() * 16) + 5;
+      const altura = Math.floor(Math.random() * 16) + 5;
+      questionText = `¿Cuál es el área de un triángulo con base ${base} cm y altura ${altura} cm?`;
+      correctAnswer = ((base * altura) / 2).toFixed(2) + ' cm²';
+      break;
+    }
+    case 3: { 
+      const radio = Math.floor(Math.random() * 11) + 2; // 2 - 12
+      questionText = `¿Cuál es el área de un círculo con radio ${radio} cm? (Usa π ≈ 3.14)`;
+      correctAnswer = (3.14 * radio * radio).toFixed(2) + ' cm²';
+      break;
+    }
+  }
+
+  const options = shuffleOptions([
+    correctAnswer,
+    generateWrongAnswer(correctAnswer),
+    generateWrongAnswer(correctAnswer),
+    generateWrongAnswer(correctAnswer),
+  ]);
+
+  return {
+    questionText,
+    options,
+    correctAnswer,
+  };
+}
+
+export function generateAreaQuiz(userId, categoryId, courseId) {
+  const questions = [];
+
+  for (let i = 0; i < 5; i++) {
+    questions.push(generateAreaQuestion());
+  }
+
+  return {
+    title: 'Prueba de Áreas de Figuras Geométricas',
+    description: 'Pon a prueba tus conocimientos sobre el cálculo de áreas de figuras planas.',
+    category: categoryId,
+    course: courseId,
+    level: 'Beginner',
+    questions,
+    createdBy: userId,
+  };
+}
+

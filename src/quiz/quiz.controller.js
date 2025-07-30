@@ -1,5 +1,5 @@
 import Quiz from '../quiz/quiz.model.js';
-import { generateMRUQuiz } from '../utils/quizgenerator.js';
+import { generateMRUQuiz, generateAreaQuiz } from '../utils/quizgenerator.js';
 
 export const createQuiz = async (req, res) => {
   const { title, description, category, course, level, questions } = req.body;
@@ -159,3 +159,69 @@ export const createMRUQuiz = async (req, res) => {
     });
   }
 };
+
+export const createAreaQuiz = async (req, res) => {
+  try {
+    const { category, course } = req.body;
+
+    const quizData = generateAreaQuiz(req.usuario._id, category, course);
+    const quiz = new Quiz(quizData);
+    await quiz.save();
+
+    return res.status(201).json({
+      success: true,
+      message: 'Quiz de áreas creado exitosamente',
+      quiz,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      message: 'Error al crear el quiz de áreas',
+      error: error.message,
+    });
+  }
+};
+
+export const submitQuiz = async (req, res) => {
+  const { id } = req.params; 
+  const { answers } = req.body; 
+
+  try {
+    const quiz = await Quiz.findById(id);
+    if (!quiz) {
+      return res.status(404).json({ success: false, message: 'Quiz no encontrado' });
+    }
+
+    let score = 0;
+    const total = quiz.questions.length;
+    const detailedResults = quiz.questions.map((question) => {
+      const userAnswer = answers.find(ans => ans.questionText === question.questionText);
+      const isCorrect = userAnswer && userAnswer.selected === question.correctAnswer;
+      if (isCorrect) score++;
+
+      return {
+        question: question.questionText,
+        selected: userAnswer ? userAnswer.selected : null,
+        correct: question.correctAnswer,
+        isCorrect,
+      };
+    });
+
+    return res.status(200).json({
+      success: true,
+      message: 'Resultados del quiz',
+      score,
+      total,
+      percentage: ((score / total) * 100).toFixed(2),
+      results: detailedResults,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      message: 'Error al procesar el quiz',
+      error: error.message,
+    });
+  }
+};
+
+

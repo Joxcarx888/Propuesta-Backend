@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { createQuiz, getAllQuizzes, getQuizById, updateQuiz, deleteQuiz, createMRUQuiz } from '../quiz/quiz.controller.js';
+import { createQuiz, getAllQuizzes, getQuizById, updateQuiz, deleteQuiz, createMRUQuiz, createAreaQuiz, submitQuiz } from '../quiz/quiz.controller.js';
 import { validarJWT } from '../middlewares/validar-jwt.js';
 import { tieneRole } from '../middlewares/validar-roles.js';
 
@@ -42,5 +42,20 @@ router.post(
     tieneRole('ADMIN', 'TUTOR'),
     createMRUQuiz
 );
+
+
+router.post(
+    '/generate/area',
+    validarJWT,
+    tieneRole('ADMIN', 'TUTOR'),
+    createAreaQuiz
+);
+
+router.post(
+  '/:id/submit',
+  validarJWT,
+  submitQuiz
+);
+
 
 export default router;

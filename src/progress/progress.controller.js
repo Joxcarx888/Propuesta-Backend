@@ -1,4 +1,48 @@
 import Progress from '../progress/progress.model.js';
+import Quiz from '../quiz/quiz.model.js';
+import Material from '../material/material.model.js';
+
+export const getUserProgressSummary = async (req, res) => {
+  const { userId } = req.params;
+
+  try {
+    const totalMaterials = await Material.countDocuments();
+    const totalQuizzes = await Quiz.countDocuments();
+
+    const completedMaterials = await Progress.countDocuments({
+      user: userId,
+      material: { $ne: null },
+      completed: true
+    });
+
+    const completedQuizzes = await Progress.countDocuments({
+      user: userId,
+      quiz: { $ne: null },
+      completed: true
+    });
+
+    const materialProgress = totalMaterials === 0 ? 0 : (completedMaterials / totalMaterials) * 100;
+    const quizProgress = totalQuizzes === 0 ? 0 : (completedQuizzes / totalQuizzes) * 100;
+
+    return res.status(200).json({
+      success: true,
+      user: userId,
+      totalMaterials,
+      completedMaterials,
+      materialProgress,
+      totalQuizzes,
+      completedQuizzes,
+      quizProgress
+    });
+
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      message: 'Error calculating progress summary',
+      error: error.message
+    });
+  }
+};
 
 export const createProgress = async (req, res) => {
   const { user, material, quiz, completed, score } = req.body;

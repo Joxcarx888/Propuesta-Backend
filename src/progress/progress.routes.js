@@ -4,7 +4,8 @@ import {
   getAllProgress,
   getProgressById,
   updateProgress,
-  deleteProgress
+  deleteProgress,
+  getUserProgressSummary
 } from '../progress/progress.controller.js';
 
 import { validarJWT } from '../middlewares/validar-jwt.js';
@@ -24,6 +25,12 @@ router.get(
 );
 
 router.get(
+  '/user/:userId/summary',
+  validarJWT,
+  getUserProgressSummary
+);
+
+router.get(
   '/:id',
   validarJWT,
   getProgressById
@@ -40,5 +47,6 @@ router.delete(
   validarJWT,
   deleteProgress
 );
+
 
 export default router;

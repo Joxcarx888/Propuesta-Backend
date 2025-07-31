@@ -15,6 +15,7 @@ import progressRoutes from '../src/progress/progress.routes.js';
 import forumRoutes from '../src/forum/forum.routes.js';
 import postRoutes from '../src/post/post.routes.js';
 import userRoutes from '../src/user/user.routes.js'; 
+import commentRoutes from '../src/comment/comment.routes.js';
 
 const middlewares = (app) => {
     app.use(express.urlencoded({ extended: false }));
@@ -35,6 +36,7 @@ const routes =(app) => {
     app.use('/Propuesta/v1/forum', forumRoutes);
     app.use('/Propuesta/v1/post', postRoutes);
     app.use('/Propuesta/v1/user', userRoutes);
+    app.use('/Propuesta/v1/comment', commentRoutes);
 }
  
  

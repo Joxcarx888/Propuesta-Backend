@@ -30,3 +30,24 @@ export const changeUserRole = async (req, res) => {
     res.status(500).json({ msg: 'Server error', error });
   }
 };
+
+export const getUsers = async (req, res) => {
+  const { limit = 10, offset = 0 } = req.query;
+
+  try {
+    const [total, users] = await Promise.all([
+      User.countDocuments({ estado: true }),
+      User.find({ estado: true })
+        .skip(Number(offset))
+        .limit(Number(limit))
+        .select('-password') 
+    ]);
+
+    res.json({
+      total,
+      users,
+    });
+  } catch (error) {
+    res.status(500).json({ msg: 'Server error', error });
+  }
+};
